@@ -1,0 +1,612 @@
+/* Reset CSS */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* commom  */
+
+.clear{
+    clear: both;
+}
+
+.text-white{
+    color: white !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+.col-2{
+    width: 50%;
+}
+.col-3{
+    width: 33.3333%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.btn{
+    background-color: black;
+    padding: 11px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    border: none !important;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: black !important;
+    background-color: #cccc;
+}
+
+.pull-right{
+    float: right!important;
+}
+
+/* main  */
+
+#main{
+
+}
+
+#header{
+    height: 46px;
+    background-color: black ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    z-index: 1;
+}
+
+/* Phan nav */
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    display: block;
+    padding: 0 24px;
+
+    
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    color: black;
+    background-color:#ccc;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(165, 164, 164, 0.8);
+    min-width: 160px;
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 8px 16px;
+    line-height: 22px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 10px;
+}
+
+/* Phan Search Button */
+
+#header .search-btn{
+    float: right;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336!important;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+/* phan slider */
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url("/The_Band/assets/img/slider/slider4.jpg") top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    bottom: 45px; 
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 100px;
+    font-size: 24px;
+    margin:10px;
+}
+
+#slider .text-description{
+    margin:15px;
+    font-size: 15px;
+
+}
+
+/* content */
+
+#content{
+    
+}
+
+#content .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 112px;
+}
+
+#content .section-heading{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+
+}
+
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin: 15px;
+    opacity: 0.7;
+
+}
+
+#content .about-text{
+    text-align: justify;
+    margin: 15px;
+    line-height: 22.5px;
+    font-size: 15px;
+}
+
+#content .member-list{
+    margin-top: 48px;
+    
+}
+
+#content .member-name{
+    font-size: 15px;
+    margin: 15px 0;
+
+}
+
+#content .member-img{
+    width: 154px;
+    border-radius: 5px;
+    
+}
+
+/* tour section  */
+
+#content .tour-section{
+    background-color: black;
+}
+
+#content .ticket-list{
+    background-color: white;
+    margin-top: 35px;
+    list-style-type: none;
+
+}
+
+#content .ticket-list li{
+    padding: 8px 16px;
+    font-size: 15px;
+    line-height: 23px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+#content .sold-out{
+    padding: 3px 8px;
+    margin-left: 16px;
+    background-color: rgb(244, 67, 54);
+    line-height: 23px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+#content .quantity{
+    width: 24px;
+    height: 24px;
+    color: white;
+    border-radius: 50%;
+    background-color: black;
+    text-align: center;
+    padding: 0 8px;
+    margin-right: 16px;
+    float: right;
+    line-height: 24px;
+
+}
+
+#content .places-list{
+    margin-top: 32px;
+}
+
+#content .place-img{
+    width: 100%;
+    height: 183px;
+    display: block;
+}
+
+#content .place-img:hover{
+    opacity: 0.6;
+}
+
+#content .place-body{
+    background-color: white;
+    padding: 16px;
+    font-size: 15px;
+}
+
+#content .place-heading{
+    font-size: 15px;
+    font-weight: 570;
+}
+
+#content .place-time{
+    margin-top: 15px;
+    color: #757575;
+    font-size: 15px;
+
+}
+
+#content .place-description{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+
+
+/* Modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left : 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+
+}
+
+.modal .modal-container{
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+
+.modal header.modal-header {
+    background: #009688;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.modal-heading-icon{
+    margin-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    animation: modalFadeOut ease .3s;
+}
+
+.modal-close:hover{
+    cursor: pointer;
+    color:black;
+    background-color: #fff;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal .modal-label{
+    display: block;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height:22px;
+}
+
+.modal .modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.modal #buy-tickets{
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height:22px;
+    background: #009688;
+    border: none;
+    color:#fff;
+    font-weight: 470;
+
+}
+
+.open{
+    display: flex;
+}
+
+.modal #buy-tickets:hover{
+    color: black;
+    background-color: #b1fff7;
+}
+
+.modal .modal-footer{
+    text-align: center;
+    padding: 16px;
+}
+
+
+.modal .modal-footer a{
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalFadeOut{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-250px);
+
+    }
+}
+
+/* Contact form */
+
+.contact-content{
+    margin-top: 48px;
+
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height:27px;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.form-control{
+    line-height:22.5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+
+/* footer section  */
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social{
+    font-size: 24px;
+
+}
+
+#footer .social a{
+    text-decoration: none;
+    color: #424141;
+    opacity: 0.7;
+    margin: 0 -.5px;
+    
+}
+
+#footer .social a:hover{
+    opacity: 0.4;
+}
+
+#footer .copy-right{
+    font-size: 15px;
+    line-height: 22.5px;
+    margin: 15px 0;
+    opacity: 0.65;
+}
+
+#footer .copy-right a{
+    color: #000;
+    opacity: 0.9;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
