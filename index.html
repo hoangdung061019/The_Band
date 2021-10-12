@@ -44,9 +44,32 @@
         </div>
         
         <div id="slider">
-            <div class="text-content">
-                <h2 class="text-heading"> New York </h2>
-                <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+            <div class="slider-1 open-slide">
+                <div class="text-content">
+                    <h2 class="text-heading"> New York </h2>
+                    <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="slider-2 close-slide">
+                <div class="text-content">
+                    <h2 class="text-heading"> New York </h2>
+                    <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="slider-3 close-slide">
+                <div class="text-content">
+                    <h2 class="text-heading"> New York </h2>
+                    <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="slider-4 close-slide">
+                <div class="text-content">
+                    <h2 class="text-heading"> New York </h2>
+                    <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                </div>
             </div>
         </div>
 
@@ -261,79 +284,9 @@
         </div>
     </div>
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket');
-        const modal = document.querySelector('.js-modal');
-        const modalClose = document.querySelector('.js-modal-close');
-        const modalContainer = document.querySelector('.js-modal-container')
-
         
-
-        function showBuyTickets(){
-                modal.classList.add('open');
-            }
-
-        function hideBuyTickets(){
-                modal.classList.remove('open'); 
-            }
-
-        for (const item of buyBtns){  
-            item.addEventListener('click', showBuyTickets);
-        }
-        
-        modalClose.addEventListener('click', hideBuyTickets);
-
-        modal.addEventListener('click', hideBuyTickets);
-
-        modalContainer.onclick = function(e){
-            e.stopPropagation();
-        }
-
-
-
-        // Responsive 
-        var header = document.getElementById('header');
-        var mobileMenu = document.querySelector('.js-menu-btn');
-        var headerHeight = header.clientHeight;
-
-        // open/close menu btn
-        mobileMenu.onclick = function() {
-            if(header.clientHeight === headerHeight){
-                header.style.height = 'auto';
-            } else{
-                header.style.height = '46px';
-            }
-        }
-
-        // auto close when choose menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
-        var subNav = document.querySelector('.subnav');
-        //var checksubNav = 0;
-
-        for (var i = 0; i < menuItems.length; i++){
-            var menuItem = menuItems[i];
-            
-            menuItem.onclick = function (e){
-            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-            
-            
-                if(!isParentMenu){    // Hide
-                    header.style.height = '46px';
-
-                }else{                // Show
-                    e.preventDefault();    //Bo qua hanh vi mac dinh
-                    header.style.height = 'auto';
-                    //checksubNav++;
-                }
-                // if(checksubNav%2==0){
-                //     subNav.style.position = 'absolute';
-                // }else{
-                //     subNav.style.position = 'initial';
-                // }
-            }
-
-            
-
-        }
     </script>
+
+    <script src="./assets/Js/main.js"></script>
 </body>
 </html>
