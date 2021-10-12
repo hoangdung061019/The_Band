@@ -4,7 +4,35 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 10230px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/* Tablet + Mobile*/
+@media (max-width: 1023px){
+    .btn{
+        padding:15px 16px;
+    }
+
+    #nav .subnav a{
+        padding: 13px 48px;
+    }
+
+    .contact-form .form-control{
+        padding: 15px;
+
+    }
+    .contact-info {
+        line-height: 37px;
+    }
+
+    #footer .social-list a{
+        margin: 0 8px;
+    }
+
+    .social-list{
+        font-size: 48px;
+    }
     
 }
 
@@ -55,7 +83,6 @@
     #nav .subnav a{
         color: #fff;
         padding: 13px 48px;
-
     }
 
     #content .member-img{
@@ -63,7 +90,7 @@
     }
 
     .contact-form{
-        margin-top:16px;    
+        margin-top:32px;    
     }
 
     
