@@ -7,6 +7,8 @@
     <title>The Girl</title>
     <link rel="icon" href="https://avenue-stage.icons8.com/bubbles/2x/monitor.png" type="image/gif" sizes="57x57">
     <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- nên đặt responsive dưới file style vì chạy từ trên xuống -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -32,6 +34,7 @@
             </ul>
 
             <!-- End: nav -->
+            <div class="js-menu-btn mobile-menu-btn"><i class="menu-icon ti-menu"></i></div>
 
             <!-- Begin: Search button  -->
             <div class="search-btn">
@@ -61,21 +64,21 @@
                 </p>
                 <div class="row member-list">
                     <!-- member 1-->
-                    <div class="col col-3 text-center">
+                    <div class="s-col-full mt-16 col col-3 text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="assets/img/girl_team/girl1.jpg" alt="Name" class="member-img">
                     </div>
                     <!-- member 2-->
-                    <div class="col col-3 text-center">
+                    <div class="s-col-full mt-16 col col-3 text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="assets/img/girl_team/girl2.jpg" alt="Name" class="member-img">
                     </div>
                     <!-- member 3-->
-                    <div class="col col-3 text-center">
+                    <div class="s-col-full mt-16 col col-3 text-center">
                         <p class="member-name">
                             Name
                         </p>
@@ -103,7 +106,7 @@
 
                     <!-- Places -->
                     <div class="row places-list">
-                        <div class="col col-3">
+                        <div class="mt-16 s-col-full col col-3">
                             <img src="assets/img/places/place1.jpg" alt="Girl1" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">
@@ -115,12 +118,12 @@
                                 <p class="place-description">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button href="#" class="btn js-buy-ticket">
+                                <button href="#" class="s-full-width btn js-buy-ticket">
                                     Buy Tickets
                                 </button>
                             </div>
                         </div>
-                        <div class="col col-3">
+                        <div class="mt-16 s-col-full col col-3">
                             <img src="assets/img/places/place2.jpg" alt="Girl1" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">
@@ -132,12 +135,12 @@
                                 <p class="place-description">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button href="#" class="btn js-buy-ticket">
+                                <button href="#" class="s-full-width btn js-buy-ticket">
                                     Buy Tickets
                                 </button>
                             </div>
                         </div> 
-                        <div class="col col-3">
+                        <div class="mt-16 s-col-full col col-3">
                             <img src="assets/img/places/place3.jpg" alt="Girl1" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">
@@ -149,7 +152,7 @@
                                 <p class="place-description">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button href="#" class="btn js-buy-ticket">
+                                <button href="#" class="s-full-width btn js-buy-ticket">
                                     Buy Tickets
                                 </button>
                             </div>
@@ -168,18 +171,18 @@
                 </p>
 
                 <div class="row contact-content">
-                    <div class="col col-2 contact-info">
+                    <div class="s-col-full col col-2 contact-info">
                         <p><i class="ti-location-pin"></i>Chicago, US</p>
                         <p><i class="ti-mobile"></i>Phone: +00 151515</p>
                         <p><i class="ti-email"></i>Email: mail@mail.com</p>
                     </div>
-                    <div class="col col-2 contact-form">
+                    <div class="s-col-full col col-2 contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-2">
+                                <div class="s-col-full col col-2">
                                     <input type="text" name="" id="" required placeholder="Name" class="form-control">
                                 </div>
-                                <div class="col col-2">
+                                <div class="s-col-full s-mt-8 col col-2">
                                     <input type="email" name="" id="" required placeholder="email" class="form-control">
                                 </div>
                             </div>
@@ -188,7 +191,7 @@
                                     <input type="text" name="" id="" required placeholder="Message" class="form-control">
                                 </div>
                             </div>
-                            <input type="submit" value="SEND" class="btn pull-right mt-16">
+                            <input type="submit" value="SEND" class="s-full-width btn pull-right mt-16">
                         </form>
                     </div>
                 </div>
@@ -276,13 +279,60 @@
         for (const item of buyBtns){  
             item.addEventListener('click', showBuyTickets);
         }
-
+        
         modalClose.addEventListener('click', hideBuyTickets);
 
         modal.addEventListener('click', hideBuyTickets);
 
         modalContainer.onclick = function(e){
             e.stopPropagation();
+        }
+
+
+
+        // Responsive 
+        var header = document.getElementById('header');
+        var mobileMenu = document.querySelector('.js-menu-btn');
+        var headerHeight = header.clientHeight;
+
+        // open/close menu btn
+        mobileMenu.onclick = function() {
+            if(header.clientHeight === headerHeight){
+                header.style.height = 'auto';
+            } else{
+                header.style.height = '46px';
+            }
+        }
+
+        // auto close when choose menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        var subNav = document.querySelector('.subnav');
+        var checksubNav = 0;
+
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function (e){
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+            
+            
+                if(!isParentMenu){    // Hide
+                    header.style.height = '46px';
+
+                }else{                // Show
+                    e.preventDefault();    //Bo qua hanh vi mac dinh
+                    header.style.height = 'auto';
+                    checksubNav++;
+                }
+                if(checksubNav%2==0){
+                    subNav.style.position = 'absolute';
+                }else{
+                    subNav.style.position = 'initial';
+                }
+            }
+
+            
+
         }
     </script>
 </body>
